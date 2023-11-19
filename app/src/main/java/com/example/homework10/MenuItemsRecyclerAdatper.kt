@@ -1,5 +1,7 @@
 package com.example.homework10
 
+import android.annotation.SuppressLint
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.ViewGroup
@@ -18,10 +20,17 @@ class MenuItemsRecyclerAdatper(private val menuItems: MutableList<ProfileMenuIte
         return menuItems.size
     }
 
+    @SuppressLint("ResourceAsColor")
     override fun onBindViewHolder(holder: MenuItemHolder, position: Int) {
         var item = menuItems[position]
         holder.binding.menuItemIcon.setImageResource(item.icon)
         holder.binding.menuItemText.text = item.itemText
+        if (item.itemType == "logout"){
+            holder.binding.menuItemText.setTextColor(Color.parseColor("#f25454"))
+        }
+        if (item.itemType == "language"){
+            holder.binding.menuItemTextLang.text = "En(US)"
+        }
 
     }
 

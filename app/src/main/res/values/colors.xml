@@ -4,6 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="back_color">#35383F</color>
     <color name="bottom_line_color">#40444C</color>
-
+    <color name="red">#FF0000</color>
 
 </resources>
