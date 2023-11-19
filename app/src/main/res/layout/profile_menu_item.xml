@@ -40,11 +40,11 @@
         android:textColor="@color/white"
         android:textSize="25dp"
         android:textStyle=""
-        app:layout_constraintEnd_toStartOf="@+id/imageView6"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewArrow"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/imageViewArrow"
         android:layout_width="13dp"
         android:layout_height="23dp"
         android:layout_marginTop="28dp"

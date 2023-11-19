@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.MenuItem
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homework10.databinding.ProfileMenuItemBinding
@@ -27,6 +28,7 @@ class MenuItemsRecyclerAdatper(private val menuItems: MutableList<ProfileMenuIte
         holder.binding.menuItemText.text = item.itemText
         if (item.itemType == "logout"){
             holder.binding.menuItemText.setTextColor(Color.parseColor("#f25454"))
+            holder.binding.imageViewArrow.visibility = View.GONE
         }
         if (item.itemType == "language"){
             holder.binding.menuItemTextLang.text = "En(US)"
