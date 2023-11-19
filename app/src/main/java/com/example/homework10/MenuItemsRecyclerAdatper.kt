@@ -11,8 +11,6 @@ import com.example.homework10.databinding.ProfileMenuItemBinding
 
 class MenuItemsRecyclerAdatper(private val menuItems: MutableList<ProfileMenuItem>): RecyclerView.Adapter<MenuItemsRecyclerAdatper.MenuItemHolder>() {
 
-
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MenuItemHolder {
         return MenuItemHolder(ProfileMenuItemBinding.inflate(LayoutInflater.from(parent.context),parent,false))
     }
@@ -21,7 +19,7 @@ class MenuItemsRecyclerAdatper(private val menuItems: MutableList<ProfileMenuIte
         return menuItems.size
     }
 
-    @SuppressLint("ResourceAsColor")
+
     override fun onBindViewHolder(holder: MenuItemHolder, position: Int) {
         var item = menuItems[position]
         holder.binding.menuItemIcon.setImageResource(item.icon)
@@ -33,13 +31,10 @@ class MenuItemsRecyclerAdatper(private val menuItems: MutableList<ProfileMenuIte
         if (item.itemType == "language"){
             holder.binding.menuItemTextLang.text = "En(US)"
         }
-
     }
-
 
     inner class MenuItemHolder(var binding: ProfileMenuItemBinding): RecyclerView.ViewHolder(binding.root){
 
     }
-
 
 }
