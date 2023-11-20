@@ -36,5 +36,4 @@ class MenuItemsRecyclerAdatper(private val menuItems: MutableList<ProfileMenuIte
     inner class MenuItemHolder(var binding: ProfileMenuItemBinding): RecyclerView.ViewHolder(binding.root){
 
     }
-
 }
